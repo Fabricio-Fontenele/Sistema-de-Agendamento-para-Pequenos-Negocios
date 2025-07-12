@@ -37,3 +37,6 @@ build
 
 # ignore yarn.lock
 yarn.lock
+
+# Next.js build output
+.next
