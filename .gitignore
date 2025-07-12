@@ -58,7 +58,6 @@ tmp/
 tsconfig.tsbuildinfo
 
 # Ignore yarn and pnpm lock if you use npm
-yarn.lock
 pnpm-lock.yaml
 
 # Prisma
