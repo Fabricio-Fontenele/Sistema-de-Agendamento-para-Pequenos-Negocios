@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   db:
@@ -15,8 +15,6 @@ services:
     build: ./backEnd
     env_file:
       - ./backEnd/.env.docker
-    volumes:
-      - ./backEnd:/app
     ports:
       - "3333:3333"
     depends_on:
@@ -24,8 +22,6 @@ services:
 
   frontend:
     build: ./frontEnd
-    volumes:
-      - ./frontEnd:/app
     ports:
       - "3000:3000"
     depends_on:
