@@ -22,18 +22,16 @@ Este projeto é uma plataforma web completa para agendamento online, ideal para 
 - Tema escuro (dark mode)
 - Internacionalização (português/inglês)
 
-## Tecnologias 
+## Tecnologias
 
 - **Frontend:** Next.js (React)
-- **Backend:** NestJS
-- **Banco de Dados:** PostgreSQL
-- **Notificações:** SendGrid (e-mail)
+- **Backend:** Node.js + Express + Prisma ORM
+- **Banco de Dados:** MySQL
+- **Notificações:** SendGrid (e-mail) e Twilio (SMS)
+- **Autenticação:** JWT
 - **Cloud:** AWS (EC2, RDS, S3)
 - **CI/CD:** GitHub Actions
 - **Containerização:** Docker
-
-
-
 
 ## Contribuição
 
@@ -45,4 +43,4 @@ Pull requests são bem-vindos! Para grandes mudanças, abra uma issue primeiro p
 
 ---
 
-> Projeto desenvolvido por [Fabricio, Ruan] e [Francisco] durante as férias de 2025, com o objetivo de aprendizado e portfólio.
+> Projeto desenvolvido por [Fabricio, Ruan e Francisco] durante as férias de 2025, com o objetivo de aprendizado e portfólio.
