@@ -1,0 +1,83 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int         @id @default(autoincrement())
+  name        String
+  email       String      @unique
+  password    String
+  role        UserRole
+  bookings    Booking[]
+  businesses  Business[]  @relation("OwnerBusinesses")
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Business {
+  id           Int        @id @default(autoincrement())
+  name         String
+  description  String?
+  owner        User       @relation("OwnerBusinesses", fields: [ownerId], references: [id])
+  ownerId      Int
+  providers    Provider[]
+  services     Service[]
+  bookings     Booking[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model Provider {
+  id          Int       @id @default(autoincrement())
+  name        String
+  business    Business  @relation(fields: [businessId], references: [id])
+  businessId  Int
+  bookings    Booking[]
+  services    Service[] @relation("ProviderServices")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Service {
+  id           Int        @id @default(autoincrement())
+  name         String
+  description  String?
+  price        Float
+  duration     Int        // duração em minutos
+  business     Business   @relation(fields: [businessId], references: [id])
+  businessId   Int
+  providers    Provider[] @relation("ProviderServices")
+  bookings     Booking[]
+}
+
+model Booking {
+  id          Int       @id @default(autoincrement())
+  date        DateTime
+  user        User      @relation(fields: [userId], references: [id])
+  userId      Int
+  business    Business  @relation(fields: [businessId], references: [id])
+  businessId  Int
+  provider    Provider  @relation(fields: [providerId], references: [id])
+  providerId  Int
+  service     Service   @relation(fields: [serviceId], references: [id])
+  serviceId   Int
+  status      BookingStatus @default(PENDING)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
+
+enum UserRole {
+  CLIENT
+  BUSINESS_OWNER
+}

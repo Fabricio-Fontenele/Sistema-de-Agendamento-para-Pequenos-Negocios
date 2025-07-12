@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "outDir": "../build",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "paths": {
+      "@/*": ["*"]
+    }
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/types/**/*.d.ts",
+    "./test/**/*.ts"
+  ],
+  "exclude": [
+    "../build",
+    "./node_modules"
+  ]
+}

@@ -1,42 +1,83 @@
-                                                                        lib-cov
-*.seed
+# Node modules & dependencies
+node_modules/
+bower_components/
+
+# Build output & production files
+dist/
+build/
+.next/
+out/
+.next.cache/
+.eslintcache
+
+# Logs & debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 *.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-*.swp
 
-pids
-logs
-results
-tmp
-
-# Test coverage reports
-coverage
-
-# API keys and secrets
-.env
-
-# Dependency directory
-node_modules
-bower_components
-
-# Editors
-.idea
-*.iml
-
-# OS metadata
+# OS files
 .DS_Store
 Thumbs.db
 
-# Ignore built ts files
-dist
-build
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
 
-# ignore yarn.lock
+# Env files & secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Test coverage
+coverage/
+.nyc_output/
+lib-cov/
+
+# Miscellaneous
+*.pid
+*.seed
+*.csv
+*.dat
+*.out
+*.gz
+*.swp
+pids/
+logs/
+results/
+tmp/
+*.pid.lock
+
+# Typescript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Ignore yarn and pnpm lock if you use npm
 yarn.lock
+pnpm-lock.yaml
 
-# Next.js build output
-.next
+# Prisma
+prisma/migrations/
+prisma/dev.db
+prisma/test.db
+
+# Next.js specific
+.next/
+out/
+.vercel/
+
+# Optional: Ignore local database files (exemplo para SQLite ou outros)
+*.sqlite
+*.sqlite3
+
+# Ignore Mac system file
+.AppleDouble
+
+# Ignore Windows system files
+ehthumbs.db
+Icon?
