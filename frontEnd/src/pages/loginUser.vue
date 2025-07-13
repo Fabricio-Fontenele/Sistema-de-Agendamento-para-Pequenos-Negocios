@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="login-user">
     <header class="home__header">
       <img class="home__logo" src="/logo.svg" alt="Logo do Sistema" />
       <nav class="home__nav">
