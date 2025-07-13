@@ -4,7 +4,7 @@ Plataforma web completa para agendamento online, ideal para salões de beleza, b
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - **Cadastro de negócios e clientes**
 - **Painel administrativo** para o negócio (gerenciamento de horários, serviços, profissionais e agendamentos)
@@ -14,7 +14,7 @@ Plataforma web completa para agendamento online, ideal para salões de beleza, b
 - **Perfil do negócio**: horários disponíveis, serviços oferecidos, equipe
 - **Responsividade**: funciona em dispositivos móveis e desktop
 
-### 🛣️ Funcionalidades Extra (roadmap)
+### Funcionalidades Extra (roadmap)
 
 - Sincronização com Google Calendar/Outlook
 - Pagamento online (Stripe/Pix)
@@ -26,9 +26,9 @@ Plataforma web completa para agendamento online, ideal para salões de beleza, b
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
-- **Frontend:** Next.js (React)
+- **Frontend:** Vue 3 + Vite
 - **Backend:** Node.js + Express + Prisma ORM
 - **Banco de Dados:** MySQL
 - **Notificações:** SendGrid (e-mail) e Twilio (SMS)
@@ -39,22 +39,25 @@ Plataforma web completa para agendamento online, ideal para salões de beleza, b
 
 ---
 
-## 💻 Como rodar o projeto
+## Como rodar o projeto
 
 > Pré-requisitos: [Docker](https://www.docker.com/get-started/) e [Docker Compose](https://docs.docker.com/compose/)
 
 Clone o repositório:
+
 ```sh
 git clone https://github.com/seu-usuario/seu-repo.git
 cd seu-repo
 ```
 
 Suba toda a stack em containers:
+
 ```sh
 sudo docker compose up --build
 ```
 
 Acesse:
+
 - Frontend: [http://localhost:3000](http://localhost:3000)
 - Backend: [http://localhost:3333](http://localhost:3333)
 - MySQL: localhost:3306 (usuário: root, senha: admin)
@@ -63,7 +66,7 @@ Acesse:
 
 ---
 
-## 📦 Estrutura de pastas
+## Estrutura de pastas
 
 ```
 /
@@ -76,7 +79,7 @@ Acesse:
 
 ---
 
-## 🤝 Contribuição
+## Contribuição
 
 Pull requests são bem-vindos! Para grandes mudanças, abra uma issue primeiro para discutir o que você gostaria de modificar.
 
@@ -88,7 +91,7 @@ Pull requests são bem-vindos! Para grandes mudanças, abra uma issue primeiro p
 
 ---
 
-## 📄 Licença
+## Licença
 
 [MIT](LICENSE)
 
