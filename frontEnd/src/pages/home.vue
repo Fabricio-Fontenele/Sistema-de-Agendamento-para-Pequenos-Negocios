@@ -1,9 +1,15 @@
 <template>
   <div class="home">
     <header class="home__header">
-      <img class="home__logo" src="/logo.svg" alt="Logo do Sistema" />
+      <img
+        class="home__logo"
+        src="/logo.svg"
+        alt="Logo do Sistema"
+        @click="$router.push('/home')"
+        style="cursor: pointer"
+      />
       <nav class="home__nav">
-        <button @click="$router.push('/loginUser')" class="btn btn--primary">
+        <button @click="$router.push('/login')" class="btn btn--primary">
           Entrar
         </button>
         <button @click="$router.push('/register')" class="btn btn--secondary">
