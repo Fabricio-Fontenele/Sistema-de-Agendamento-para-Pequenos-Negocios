@@ -1,7 +1,13 @@
 <template>
   <div class="home">
     <header class="home__header">
-      <img class="home__logo" src="/logo.svg" alt="Logo do Sistema" />
+      <img
+        class="home__logo"
+        src="/logo.svg"
+        alt="Logo do Sistema"
+        @click="$router.push('/home')"
+        style="cursor: pointer"
+      />
       <nav class="home__nav">
         <button @click="$router.push('/login')" class="btn btn--primary">
           Entrar
@@ -60,179 +66,5 @@
 </script>
 
 <style lang="scss" scoped>
-.home {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(135deg, #42b983 0%, #35495e 100%);
-  color: #fff;
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 4vw 1rem 4vw;
-    background: rgba(53, 73, 94, 0.9);
-  }
-
-  &__logo {
-    height: 48px;
-    width: 48px;
-    border-radius: 10px;
-    background: #fff;
-    object-fit: contain;
-  }
-
-  &__nav {
-    display: flex;
-    gap: 1rem;
-  }
-
-  &__hero {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 2rem 2rem 2rem;
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 500px;
-      opacity: 0.92;
-    }
-  }
-
-  &__cta {
-    margin-bottom: 2rem;
-  }
-
-  &__features {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin: 2rem auto;
-    max-width: 900px;
-
-    .feature {
-      background: rgba(255, 255, 255, 0.07);
-      border-radius: 16px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s;
-      flex: 1;
-
-      &:hover {
-        transform: translateY(-6px) scale(1.04);
-        background: rgba(255, 255, 255, 0.12);
-      }
-
-      i {
-        font-size: 2.1rem;
-        margin-bottom: 1rem;
-        color: #ffd700;
-      }
-
-      h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.7rem;
-        color: #fff;
-        font-weight: 700;
-      }
-
-      p {
-        color: #e0e0e0;
-        font-size: 1rem;
-        font-weight: 400;
-      }
-    }
-  }
-
-  &__footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    background: rgba(53, 73, 94, 0.95);
-    font-size: 1rem;
-    opacity: 0.9;
-    letter-spacing: 0.5px;
-    margin-top: auto;
-  }
-}
-
-.btn {
-  padding: 0.7rem 2rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    color 0.2s;
-  margin-left: 0.5rem;
-
-  &--primary {
-    background: #ffd700;
-    color: #35495e;
-
-    &:hover {
-      background: #ffe066;
-    }
-  }
-
-  &--secondary {
-    background: transparent;
-    color: #ffd700;
-    border: 2px solid #ffd700;
-
-    &:hover {
-      background: #ffd700;
-      color: #35495e;
-    }
-  }
-
-  &--large {
-    padding: 1rem 3rem;
-    font-size: 1.15rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .home__features {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 1rem;
-  }
-  .home__header {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .home__hero {
-    padding: 2rem 1rem 1rem 1rem;
-    h1 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-  }
-  .home__logo {
-    height: 38px;
-    width: 38px;
-  }
-}
+@use "@/assets/styles/home.scss"; // Caminho a partir da pasta src. Altere se necessário!
 </style>
