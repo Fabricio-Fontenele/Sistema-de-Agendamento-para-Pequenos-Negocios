@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ad234ff1b853d68d5f43de0c3b8811fc1878e52
 services:
   db:
     image: mysql:8
@@ -20,6 +24,7 @@ services:
       - ./backEnd/.env.docker
     ports:
       - "3333:3333"
+      - "5555:5555"
     depends_on:
       db:
         condition: service_healthy
